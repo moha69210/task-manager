@@ -1,0 +1,23 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <label for="titre">Titre :</label>
+    <input id="titre" formControlName="titre">
+    <app-error-minLength-field-form [condition]="myForm.get('titre')?.hasError('required')" fieldName="Titre"
+        errorMessage="Le titre est requis."></app-error-minLength-field-form>
+
+    <label for="description">Description :</label>
+    <input id="description" formControlName="description">
+    <app-error-minLength-field-form [condition]="myForm.get('description')?.hasError('minlength')"
+        fieldName="Description" errorMessage="La description est trop courte."></app-error-minLength-field-form>
+    <app-error-minLength-field-form [condition]="myForm.get('description')?.hasError('maxlength')"
+        fieldName="Description" errorMessage="La description est trop longue."></app-error-minLength-field-form>
+
+    <label for="date">Date :</label>
+    <input id="date" type="date" formControlName="date">
+
+    <label for="etat">État :</label>
+    <input id="etat" type="text" formControlName="etat">
+
+    <!-- Ajoutez d'autres champs ici -->
+
+    <button type="submit">Valider</button>
+</form>
