@@ -10,5 +10,10 @@ yarn : 1.22.19
 # Commandes
 ng serve
 ng build -> création du rep dist/task-manager (compilation du projet)
+ng generate m création module
+ng generate s -> création service
+ng generate c -> création composant
 
-# Outillage
+# Lien Repo Github
+
+https://github.com/moha69210/task-manager/tree/main/task-manager
